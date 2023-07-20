@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="217dp"
+        android:layout_height="227dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.696">
+
+        <EditText
+            android:id="@+id/textoEdad"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:ems="10"
+            android:hint="Edad"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/textoAltura"
+            android:layout_width="217dp"
+            android:layout_height="62dp"
+            android:ems="10"
+            android:hint="Altura en Cm"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/textoPeso"
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:ems="10"
+            android:hint="Peso en Kg"
+            android:inputType="number|numberDecimal" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/botonCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="24dp"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.832"
+        tools:ignore="MissingConstraints" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="260dp"
+        android:layout_height="74dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.364"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.087">
+
+        <RadioButton
+            android:id="@+id/radioButtonHombre"
+            android:layout_width="111dp"
+            android:layout_height="73dp"
+            android:checked="true"
+            android:text="Hombre" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMujer"
+            android:layout_width="125dp"
+            android:layout_height="59dp"
+            android:text="Mujer" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewCaloriasDiarias"
+        android:layout_width="203dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:hint="Calorias diarias"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.853" />
+
+
+    <TextView
+        android:id="@+id/textViewGrasa"
+        android:layout_width="133dp"
+        android:layout_height="31dp"
+        android:gravity="center"
+        android:hint="Grasas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.93" />
+
+    <TextView
+        android:id="@+id/textViewHidratos"
+        android:layout_width="133dp"
+        android:layout_height="31dp"
+        android:gravity="center"
+        android:hint="Hidratos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975" />
+
+    <TextView
+        android:id="@+id/textViewProtein"
+        android:layout_width="134dp"
+        android:layout_height="39dp"
+        android:gravity="center"
+        android:hint="Proteínas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.884" />
+
+    <TextView
+        android:id="@+id/textViewCaloriasTotales"
+        android:layout_width="201dp"
+        android:layout_height="47dp"
+        android:gravity="center"
+        android:hint="Calorias Totales"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="402dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:includeFontPadding="true"
+        android:text="Ecuación de Harris-Benedict"
+        android:textColor="#009688"
+        android:textColorHint="#A17878"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioGroup
+        android:layout_width="399dp"
+        android:layout_height="253dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.268">
+
+        <RadioButton
+            android:id="@+id/radioButtonPoco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Poco o ningún ejercicio" />
+
+        <RadioButton
+            android:id="@+id/radioButtonLigero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ejercicio ligero (1-3 días a la semana)" />
+
+        <RadioButton
+            android:id="@+id/radioButtonModerado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ejercicio moderado (3-5 días a la semana)" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFuerte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ejercicio fuerte (6-7 días a la semana)" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMuyFuerte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Ejercicio muy fuerte (dos veces al día, entrenamientos muy duros)	" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="176dp"
+        android:layout_height="231dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.965"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.702">
+
+        <RadioButton
+            android:id="@+id/radioButtonDefinicion"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:text="Definición" />
+
+        <RadioButton
+            android:id="@+id/radioButtonVolumen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Volumen" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMantenimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Mantenimiento" />
+
+        <RadioButton
+            android:id="@+id/radioButtonDfExtrema"
+            android:layout_width="wrap_content"
+            android:layout_height="71dp"
+
+            android:text="Definición extrema" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
